@@ -1,0 +1,23 @@
+modules:
+  jira:issuePanel:
+    - key: changelog-app-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Changelog
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.run
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  scopes:
+    - storage:app
+app:
+  id: ari:cloud:ecosystem::app/d25e859e-85e9-4c7f-b478-00d5e4672685
+  name: Changelog
+
+
